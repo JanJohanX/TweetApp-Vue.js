@@ -1,0 +1,177 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body{
+  text-align: center;
+	height: 100vh;
+  background: #182d4f;
+}
+
+svg{
+  transform: rotate(-90deg);
+    animation: spin 1.5s linear infinite;
+}
+
+circle {
+  fill: none;
+  stroke-width: 1px;
+}
+
+.underlay {
+  stroke: #ccc;
+}
+
+.progress {
+  stroke: #1da1f2;
+  stroke-width: 4px;
+  transition: .3s stroke-width ease-in-out;
+}
+
+.tragedy {
+  /* stroke-width: 7px; */
+  animation: blink .4s ease-out;
+}
+
+.progress {
+  stroke-dasharray: 251.32741228718345;
+  stroke-dashoffset: 210;
+}
+
+@keyframes blink {
+  0% {stroke-width: 4px;}
+  10% {stroke-width: 7px;}
+  100% {stroke-width: 4px;}
+}
+
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+.warn{
+  stroke: #ffad1f;
+}
+
+.danger{
+  color: #e0245e;
+  stroke: #e0245e;
+  font-size: 23px;
+  font-weight: bolder;
+}
+
+textarea{
+  border-radius: 5px;
+  border: solid #000 1px;
+}
+
+textarea:focus, input:focus{
+    outline: 0;
+}
+
+span{
+  padding-bottom: 5%;
+}
+
+/* general */
+
+/* clearfix */
+.group:before, .container:before,
+.group:after, .container:after {
+	content: " ";
+	display: table;
+}
+
+.group:after, .container:after {
+	clear: both;
+}
+
+.faded {
+  opacity: .35;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+li article {
+  text-align: justify;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	background: #57AE1E;
+	border-radius: 9px;
+	margin: 1% auto;
+	padding: 10px 8px;
+  max-width: 320px;
+  margin: 1% auto;
+  border: 4px solid transparent;
+  transition: border-color .15s ease-in-out,
+              opacity .15s ease-in-out;
+  position: relative;
+}
+
+li article{
+  display: inherit;
+}
+
+li .ctrl {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  width: 3.35em;
+  background: none;
+  border: none;
+  padding: 3px;
+  position: relative;
+  cursor: pointer;
+}
+
+.add-new {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.add-new input {
+  font-size: 14px;
+  color: #fff;
+  background: none;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, .9);
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.add-new input:focus {
+  outline: none;
+}
+
+.add-new input:first-child {
+  font-weight: bold;
+}
+
+.add-new input:last-child {
+  font-size: 13px;
+  width: 100%;
+}
+
+@media ( max-width: 860px ) {
+	article {
+		font-size: 13px;
+	}
+}
+
+.table-enter-active, .table-leave-active {
+  transition: all .20s;
+}
+
+.table-enter, .table-leave-to {
+  opacity: 0;
+  transform: scale(.75);
+}
